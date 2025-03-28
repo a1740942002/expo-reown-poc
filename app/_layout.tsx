@@ -1,3 +1,4 @@
+import '@walletconnect/react-native-compat'
 import {
   DarkTheme,
   DefaultTheme,
@@ -10,7 +11,6 @@ import { StatusBar } from 'expo-status-bar'
 import { useEffect } from 'react'
 import 'react-native-reanimated'
 import { useColorScheme } from '@/hooks/useColorScheme'
-import '@walletconnect/react-native-compat'
 import { WagmiProvider } from 'wagmi'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { AppKit } from '@reown/appkit-wagmi-react-native'
@@ -45,9 +45,9 @@ export default function RootLayout() {
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="+not-found" />
           </Stack>
+          <AppKit />
           <StatusBar style="auto" />
         </ThemeProvider>
-        <AppKit />
       </QueryClientProvider>
     </WagmiProvider>
   )

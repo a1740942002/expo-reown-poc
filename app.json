@@ -15,15 +15,22 @@
           "trust",
           "safe",
           "rainbow",
+          "uniswap",
+          "metamask",
+          "trust",
+          "safe",
+          "rainbow",
           "uniswap"
         ]
-      }
+      },
+      "bundleIdentifier": "app.xy.finance"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "app.xy.finance"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +38,7 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "./queries.js",
       "expo-router",
       [
         "expo-splash-screen",
